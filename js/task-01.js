@@ -1,13 +1,9 @@
-// const country = ['Kyiv', 'Moscow', 'Milan', 'Paris'];
-// console.log(country);
-// console.log(country[2]);
-
-// country[2] = 'Gonduras';
-
-// console.log(country);
-// console.log(country[2]);   
-
-// for (let i = 0; i < country.length; i += 1) {
-//     // console.log({i+1}__{country[i]}``);
-//     console.log(`${i + 1} - ${country[i]}`)
-// }
+const friends = ['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong'];
+// const numbers = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
+const logItems = function(array) {
+    for (let i = 0; i < friends.length; i += 1) {
+        console.log(`${i + 1} - ${friends[i]}`)
+    }
+}
+logItems(friends)
+// logItems(numbers)
