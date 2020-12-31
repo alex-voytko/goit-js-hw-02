@@ -1,20 +1,20 @@
-let total = 0;
+let input;
 const numbers = [];
+let total = 0;
 while (true) {
-  let input = prompt('Введите число:');
-  if (input === isNaN(input)) {
-    alert('Было введено не число, попробуйте еще раз');
-    continue;
-  }
-  if (input === Number(input)) {
+  input = prompt("Введите число");
+  if (input === null) break;
+  input = Number(input);
+  if (Number.isNaN(input)) {
+    alert("Было введено не число, попробуйте еще раз");
+  } else {
     numbers.push(input);
-    continue;
-  }
-  if (input === null) {
-    break;
   }
 }
-for (let i = 0; i < numbers.length; i += 1) {
-  total += numbers[i];
+if (numbers.length > 0) {
+  for (const number of numbers) {
+    total += number;
+  }
+  console.log(`Общая сумма чисел равна ${total}`);
+  alert(`Общая сумма чисел равна ${total}`);
 }
-console.log(`Общая сумма чисел равна ${total}`);
